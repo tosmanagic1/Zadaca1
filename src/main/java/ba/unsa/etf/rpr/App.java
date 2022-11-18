@@ -2,6 +2,9 @@ package ba.unsa.etf.rpr;
 
 /**
  * App class that has a main method.
+ *
+ * @author Tarik Osmanagic
+ * @version 1.0
  */
 public class App
 {

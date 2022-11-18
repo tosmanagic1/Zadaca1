@@ -4,6 +4,9 @@ import java.util.Stack;
 
 /**
  *A Java Maven console application that will be used to parse and calculate arithmetic expressions using the Dijkstra expression evaluation algorithm.
+ *
+ * @author Tarik Osmanagic
+ * @version 1.0
  */
 public class ExpressionEvaluator {
     /**
