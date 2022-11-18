@@ -42,7 +42,7 @@ public class ExpressionEvaulatorTest
     @Test
     public void correctResultWithSqrtFunction () {
         ExpressionEvaluator ee = new ExpressionEvaluator();
-        String s = "( 1 + ( ( 2 * 3 ) * ( sqrt 25 ) ) )";
+        String s = "( 1 + ( ( 2 * 3 ) * ( sqrt ( 25 ) ) ) )";
         Double value = ee.evaluate(s);
         assertEquals(31, value);
     }

@@ -51,6 +51,7 @@ public class ExpressionEvaluator {
             else if (s1[i].equals("/")) ops.push(s1[i]);
             else if (s1[i].equals("sqrt")) ops.push(s1[i]);
             else if (s1[i].equals(")")) {
+                if (ops.empty()) continue;
                 String op = ops.pop();
                 Double v = vals.pop();
                 if (op.equals("+")) v = vals.pop() + v;
