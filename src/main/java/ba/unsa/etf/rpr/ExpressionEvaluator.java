@@ -13,6 +13,7 @@ public class ExpressionEvaluator {
      * ops represents stack for operators.
      */
     private Stack<String> ops;
+
     /**
      * vals represents stack for numbers.
      */
@@ -56,6 +57,7 @@ public class ExpressionEvaluator {
             else if (s1[i].equals(")")) {
                 String op = ops.pop();
                 Double v = vals.pop();
+                if (op.equals("/") && v.equals(0.0)) throw new RuntimeException ("Division by zero is not allowed!");
                 if (op.equals("+")) v = vals.pop() + v;
                 else if (op.equals("-")) v = vals.pop() - v;
                 else if (op.equals("*")) v = vals.pop() * v;

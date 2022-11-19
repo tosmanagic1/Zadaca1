@@ -18,8 +18,12 @@ public class App
         if (args.length != 0) {
             ExpressionEvaluator ee = new ExpressionEvaluator();
             String str = String.join(" ", args);
-            Double value = ee.evaluate(str);
-            System.out.println(value);
+            try {
+                Double value = ee.evaluate(str);
+                System.out.println(value);
+            } catch (RuntimeException e) {
+                System.out.println("Mistake: " + e.getMessage());
+            }
         }
     }
 }

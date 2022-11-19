@@ -61,6 +61,16 @@ public class ExpressionEvaulatorTest
     }
 
     /**
+     * Test method that checks for throwing a Runtime exception when division by zero occurs.
+     */
+    @Test
+    public void dividingByZero () {
+        ExpressionEvaluator ee = new ExpressionEvaluator();
+        String s = "( 1 + ( ( 2 * 3 ) * ( sqrt ( 25 ) / 0 ) ) )";
+        assertThrows(RuntimeException.class, () -> ee.evaluate(s), "Division by zero is not allowed!");
+    }
+
+    /**
      * arithmeticallyInvalid method tests whether the evaluate method throws a runtime exception, when string is arithmetically invalid.
      */
     @Test
